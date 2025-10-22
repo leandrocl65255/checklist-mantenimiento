@@ -11,6 +11,9 @@ import { enviarA_NetSuite } from './integrations/netsuite.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
+const mapping = JSON.parse(
+   fs.readFileSync(path.join(__dirname, 'mapping.json'), 'utf-8')
+  );
 
 const app = express();
 app.use(cors());
