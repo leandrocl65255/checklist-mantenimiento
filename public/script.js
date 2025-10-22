@@ -115,3 +115,42 @@ data.forEach(({ equipo, revisiones }) => {
     tbody.appendChild(row);
   });
 });
+document.getElementById('guardarEnviar').addEventListener('click', function () {
+  const rows = document.querySelectorAll('#checklist-body tr');
+  const data = [];
+
+  let currentEquipo = '';
+  rows.forEach(row => {
+    const cols = row.querySelectorAll('td');
+
+    // Es una fila de título de equipo
+    if (cols.length === 1) {
+      currentEquipo = cols[0].innerText.trim();
+    }
+
+    // Fila de revisión
+    if (cols.length === 8) {
+      const revision = cols[1].innerText.trim();
+      const si = cols[2].querySelector('input').checked ? '✔️' : '';
+      const no = cols[3].querySelector('input').checked ? '❌' : '';
+      const oper = cols[4].querySelector('input').checked ? '✔️' : '';
+      const mtto = cols[5].querySelector('input').checked ? '✔️' : '';
+      const falla = cols[6].querySelector('input').checked ? '✔️' : '';
+      const obs = cols[7].querySelector('textarea').value;
+
+      data.push({
+        Equipo: currentEquipo,
+        Revisión: revision,
+        SI: si,
+        NO: no,
+        Operativo: oper,
+        Mantenimiento: mtto,
+        Falla: falla,
+        Observaciones: obs
+      });
+    }
+  });
+
+  // Aquí generamos el Excel y lo enviamos
+  generarYEnviarExcel(data);
+});
