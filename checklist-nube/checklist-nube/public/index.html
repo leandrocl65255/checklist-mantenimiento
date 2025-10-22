@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Checklist de Mantenimiento</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Checklist de Mantenimiento</h1>
+    <p>Completa el formulario y se generará un Excel con el mismo formato de tu plantilla.</p>
+
+    <form id="formChecklist">
+      <article>
+        <h3>Datos generales</h3>
+        <div class="grid">
+          <label>Fecha
+            <input type="date" name="fecha" required />
+          </label>
+          <label>Técnico
+            <input type="text" name="tecnico" required />
+          </label>
+        </div>
+        <div class="grid">
+          <label>Equipo
+            <input type="text" name="equipo" required />
+          </label>
+          <label>Ubicación
+            <input type="text" name="ubicacion" />
+          </label>
+        </div>
+        <div class="grid">
+          <label>Responsable
+            <input type="text" name="responsable" />
+          </label>
+          <label>Turno
+            <select name="turno">
+              <option value="">--</option>
+              <option>Mañana</option>
+              <option>Tarde</option>
+              <option>Noche</option>
+            </select>
+          </label>
+        </div>
+      </article>
+
+      <article>
+        <h3>Ítems de revisión</h3>
+        <div id="checksContainer" class="grid"></div>
+      </article>
+
+      <article>
+        <h3>Observaciones</h3>
+        <textarea name="observaciones" rows="4" placeholder="Observaciones..."></textarea>
+      </article>
+
+      <article>
+        <h3>Firma (opcional)</h3>
+        <input type="file" name="firmaArchivo" accept="image/*" />
+      </article>
+
+      <button type="submit">Generar Excel</button>
+    </form>
+
+    <section id="result" style="margin-top: 1rem;"></section>
+    <footer><small>Hecho para integrarse con NetSuite (futuro).</small></footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
