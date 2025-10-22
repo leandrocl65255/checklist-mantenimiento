@@ -154,3 +154,26 @@ document.getElementById('guardarEnviar').addEventListener('click', function () {
   // Aquí generamos el Excel y lo enviamos
   generarYEnviarExcel(data);
 });
+function generarYEnviarExcel(data) {
+  const worksheet = XLSX.utils.json_to_sheet(data);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Checklist");
+
+  const excelBuffer = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
+  const blob = new Blob([excelBuffer], { type: 'application/octet-stream' });
+
+  const formData = new FormData();
+  formData.append("file", blob, "checklist.xlsx");
+
+  fetch('https://TU_BACKEND_RENDER_URL/enviar-excel', {
+    method: 'POST',
+    body: formData
+  })
+  .then(res => res.json())
+  .then(res => {
+    alert("✅ Enviado correctamente al correo");
+  })
+  .catch(err => {
+    alert("❌ Error al enviar: " + err.message);
+  });
+}
