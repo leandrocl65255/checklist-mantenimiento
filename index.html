@@ -5,11 +5,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checklist Mantenimiento</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-  <script>
-    emailjs.init("60ctqCXVaLkGArlbh"); // ← reemplaza por tu User ID de EmailJS
+  <script type="module">
+  import emailjs from 'https://cdn.emailjs.com/dist/email.min.mjs';
+
+  window.emailjs = emailjs;
+  emailjs.init('60ctqCXVaLkGArlbh'); // ← poné tu public key real
   </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -30,6 +32,7 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
 
 
