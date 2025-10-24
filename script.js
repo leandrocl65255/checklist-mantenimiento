@@ -207,7 +207,7 @@ document.getElementById("checklistForm").addEventListener("submit", function (e)
     checklist
   };
 
-  emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", templateParams)
+  emailjs.send("service_pdb88ye", "template_7tm4f9r", templateParams)
     .then(() => {
       alert("✅ Checklist enviado correctamente");
       form.reset();
@@ -217,3 +217,4 @@ document.getElementById("checklistForm").addEventListener("submit", function (e)
       alert("❌ Error al enviar el checklist");
     });
 });
+
