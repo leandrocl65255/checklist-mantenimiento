@@ -1,0 +1,82 @@
+/* Fondo general */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+/* Contenedor del formulario */
+.container {
+  background: white;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Inputs generales */
+form label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+/* Tabla checklist estilo Excel */
+table.checklist-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.checklist-table th,
+.checklist-table td {
+  border: 1px solid #444;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+/* Encabezados con fondo verde claro */
+.checklist-table th {
+  background-color: #d9ead3;
+}
+
+/* Input de observaciones */
+.checklist-table input[type="text"] {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+  font-size: 13px;
+}
+
+/* Radios grandes y accesibles */
+.checklist-table input[type="radio"] {
+  width: 24px;
+  height: 24px;
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+/* Botón de envío */
+button[type="submit"] {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 30px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
