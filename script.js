@@ -1,5 +1,5 @@
 // Inicializa EmailJS
-emailjs.init("TU_PUBLIC_KEY"); // <-- Reemplazá por tu Public Key de EmailJS
+emailjs.init("60ctqCXVaLkGArlbh"); // <-- Reemplazá por tu Public Key de EmailJS
 
 const equipos = {
   // ... (Tu objeto 'equipos' está intacto aquí, no lo repetimos por espacio)
@@ -142,3 +142,4 @@ document.getElementById("checklistForm").addEventListener("submit", function (e)
       alert("❌ Error al enviar el checklist");
     });
 });
+
