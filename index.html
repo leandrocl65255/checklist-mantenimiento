@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checklist Mantenimiento</title>
   <link rel="stylesheet" href="style.css">
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    emailjs.init("60ctqCXVaLkGArlbh"); // ← reemplaza por tu User ID de EmailJS
-  </script>
+  <script type="module">
+  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js';
+  emailjs.init('60ctqCXVaLkGArlbh'); // ← reemplaza con tu User ID de EmailJS
+  window.emailjs = emailjs;
+</script>
 </head>
 <body>
   <div class="container">
@@ -29,4 +30,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
