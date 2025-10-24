@@ -1,38 +1,42 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Checklist Mantenimiento</title>
-  <link rel="stylesheet" href="style.css">
-  <script type="module">
-  import emailjs from 'https://cdn.emailjs.com/dist/email.min.mjs';
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Checklist de Mantenimiento</title>
+  <link rel="stylesheet" href="style.css" />
 
-  window.emailjs = emailjs;
-  emailjs.init('60ctqCXVaLkGArlbh'); // ← poné tu public key real
-  </script>
+  <!-- Excel Export -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+
+  <!-- EmailJS SDK v4 -->
+  <script type="module">
+    import emailjs from 'https://cdn.emailjs.com/dist/email.min.mjs';
+    window.emailjs = emailjs;
+    emailjs.init("TU_PUBLIC_KEY"); // ⚠️ Reemplaza con tu PUBLIC KEY de EmailJS
+  </script>
 </head>
 <body>
-  <div class="container">
+  <main>
     <h1>Checklist de Mantenimiento</h1>
+
     <form id="checklistForm">
-      <label>Fecha:
-        <input type="date" name="fecha" required>
+      <label>
+        <strong>Fecha:</strong>
+        <input type="date" name="fecha" required />
       </label>
-      <label>Nombre de máquina:
-        <input type="text" name="maquina" required>
+      <br />
+      <label>
+        <strong>Nombre de máquina:</strong>
+        <input type="text" name="maquina" required />
       </label>
 
       <div id="checklistWrapper"></div>
 
       <button type="submit">Enviar Checklist</button>
     </form>
-  </div>
-  <script src="script.js"></script>
+  </main>
+
+  <script type="module" src="script.js"></script>
 </body>
 </html>
-
-
-
-
