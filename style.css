@@ -1,0 +1,47 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  padding: 20px;
+}
+
+.container {
+  background: white;
+  padding: 30px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 8px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form label {
+  display: block;
+  margin-top: 15px;
+}
+
+table.checklist-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+table.checklist-table th,
+table.checklist-table td {
+  border: 1px solid #444;
+  padding: 6px;
+  text-align: center;
+}
+
+table.checklist-table th {
+  background-color: #d9ead3; /* verde claro */
+}
+
+.checklist-table input[type="text"] {
+  width: 100%;
+  padding: 4px;
+  box-sizing: border-box;
+}

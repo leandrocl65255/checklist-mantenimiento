@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checklist Mantenimiento</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    emailjs.init("TU_USER_ID"); // ← reemplaza por tu User ID de EmailJS
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Checklist de Mantenimiento</h1>
+    <form id="checklistForm">
+      <label>Fecha:
+        <input type="date" name="fecha" required>
+      </label>
+      <label>Nombre de máquina:
+        <input type="text" name="maquina" required>
+      </label>
+
+      <div id="checklistWrapper"></div>
+
+      <button type="submit">Enviar Checklist</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
