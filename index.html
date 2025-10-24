@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Checklist de Mantenimiento</title>
   <link rel="stylesheet" href="style.css"/>
-  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
-  <script>
-    (function(){
-      emailjs.init("60ctqCXVaLkGArlbh");
-    })();
-  </script>
+  <script type="module">
+  import emailjs from 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+
+  emailjs.init('60ctqCXVaLkGArlbh'); // reemplaza con tu clave pública
+  window.emailjs = emailjs; // opcional, si querés usarlo globalmente
+</script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
@@ -35,4 +35,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
