@@ -131,8 +131,8 @@ document.getElementById("checklistForm").addEventListener("submit", function (e)
       }
     ]
   };
+  emailjs.send("service_pdb88ye", "template_7tm4f9r", templateParams)
 
-  emailjs.send("service_pdb88ye","template_7tm4f9r");
     .then(() => {
       alert("✅ Enviado con archivo Excel adjunto");
       e.target.reset();
@@ -142,5 +142,6 @@ document.getElementById("checklistForm").addEventListener("submit", function (e)
       alert("❌ Error al enviar el checklist");
     });
 });
+
 
 
