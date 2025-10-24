@@ -6,15 +6,16 @@
   <title>Checklist de Mantenimiento</title>
   <link rel="stylesheet" href="style.css" />
 
-  <!-- Excel Export -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-
-  <!-- EmailJS SDK v4 -->
-  <script type="module">
-    import emailjs from 'https://cdn.emailjs.com/dist/email.min.mjs';
-    window.emailjs = emailjs;
-    emailjs.init("TU_PUBLIC_KEY"); // ⚠️ Reemplaza con tu PUBLIC KEY de EmailJS
+  <!-- EmailJS SDK v3 (seguro para Netlify) -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init("60ctqCXVaLkGArlbh"); // ⚠️ Reemplaza con tu public key real
+    })();
   </script>
+
+  <!-- XLSX for Excel export -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
 </head>
 <body>
   <main>
@@ -37,6 +38,6 @@
     </form>
   </main>
 
-  <script type="module" src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
